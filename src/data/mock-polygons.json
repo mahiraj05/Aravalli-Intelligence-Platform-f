@@ -1,0 +1,77 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "riskLevel": "high",
+                "type": "deforestation",
+                "areaHa": 12.5,
+                "confidence": 0.92
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.78,
+                            26.91
+                        ],
+                        [
+                            75.79,
+                            26.91
+                        ],
+                        [
+                            75.79,
+                            26.92
+                        ],
+                        [
+                            75.78,
+                            26.92
+                        ],
+                        [
+                            75.78,
+                            26.91
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "riskLevel": "medium",
+                "type": "mining",
+                "areaHa": 4.2,
+                "confidence": 0.85
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.80,
+                            26.93
+                        ],
+                        [
+                            75.81,
+                            26.93
+                        ],
+                        [
+                            75.81,
+                            26.94
+                        ],
+                        [
+                            75.80,
+                            26.94
+                        ],
+                        [
+                            75.80,
+                            26.93
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
