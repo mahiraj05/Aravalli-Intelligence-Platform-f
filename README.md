@@ -143,7 +143,7 @@ Copy code
 ## 🔗 Live URLs
 
 - **Frontend (Firebase Hosting):**  
-  👉 *(Add your Firebase URL here)*
+  👉 https://jaypur-aravali-antigravity.web.app
 
 - **Backend API (Render):**  
   👉 https://aravalli-intelligence-platform-b.onrender.com
