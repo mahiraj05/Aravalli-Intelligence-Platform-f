@@ -1,71 +1,166 @@
-# Aravalli Intelligence Platform (AIP) - Backend
+🌍 Aravalli Intelligence Platform  
+### Team: **GEN-AI-SIS**
 
-This is the backend service for the Aravalli Intelligence Platform, an environmental intelligence system designed to detect deforestation and illegal mining in the Aravalli-Jaipur region.
+An AI-powered environmental intelligence platform built to analyze, monitor, and visualize environmental risk areas using a modern full-stack architecture.
 
-## MVP Overview
+---
 
-The current MVP implementation simulates the analysis pipeline:
-1.  **Trigger Analysis**: Simulates satellite data processing (using mock GeoJSON).
-2.  **Storage**: Uploads generated polygons to Firebase Storage.
-3.  **Database**: Stores analysis metadata and results in Firestore.
-4.  **API**: Serves results to a frontend dashboard.
+## 👥 Team Members
+- **Ritika**
+- **Mahi Raj**
+- **Mansi**
 
-**Future State**: The "mock" logic in `analysis.service.js` will be replaced by Google Earth Engine API calls to compute real-time NDVI changes.
+**Team Name:** GEN-AI-SIS
 
-## Architecture
+---
 
-The project follows a clean layered architecture:
+## 🧠 Project Overview
 
--   **`src/config`**: Configuration (Firebase, Environment variables).
--   **`src/controllers`**: Handles HTTP requests and responses.
--   **`src/services`**: Business logic (Analysis, Firestore, Storage).
--   **`src/routes`**: API route definitions.
--   **`src/utils`**: Helper utilities (Logger, etc.).
--   **`src/data`**: Mock data for MVP.
+The **Aravalli Intelligence Platform** is designed to support environmental monitoring and decision-making.  
+The system integrates a modern web-based frontend with a scalable backend API to simulate environmental analysis workflows.
 
-## Prerequisites
+The project demonstrates:
+- Full-stack system design
+- API-driven architecture
+- Cloud deployment
+- Real-world readiness for AI/analytics integration
 
--   Node.js (v18+)
--   Firebase Project with Firestore and Storage enabled.
--   Service Account JSON file for Firebase Admin.
+---
 
-## Setup & Run
+## 🎯 Problem Statement
 
-1.  **Install Dependencies**
-    ```bash
-    npm install
-    ```
+Environmental regions such as the Aravalli range face challenges like:
+- Deforestation
+- Illegal mining
+- Environmental degradation
 
-2.  **Environment Variables**
-    Create a `.env` file in the root directory:
-    ```env
-    PORT=3000
-    # Base64 encoded service account or path/details
-    # For this MVP, we rely on standard ADC or specific env vars below:
-    FIREBASE_PROJECT_ID=your-project-id
-    FIREBASE_CLIENT_EMAIL=your-email
-    FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n..."
-    FIREBASE_STORAGE_BUCKET=your-bucket.appspot.com
-    ```
+There is a lack of centralized, visual, and intelligent platforms to:
+- Analyze affected regions
+- Track changes
+- Support data-driven decisions
 
-3.  **Run Development Server**
-    ```bash
-    npm run dev
-    ```
+---
 
-4.  **Run Production Server**
-    ```bash
-    npm start
-    ```
+## 💡 Solution
 
-## API Endpoints
+This platform provides:
+- A dashboard to visualize analysis results
+- APIs to run environmental analysis
+- Cloud-based deployment for real-world scalability
 
-### 1. Trigger Analysis
-*   **POST** `/api/analyze`
-*   **Body**: `{ "type": "deforestation", "region": "jaipur-aravalli" }`
-*   **Response**: Returns the analysis ID and summary.
+The current MVP uses mock analysis data, but the architecture is designed to integrate real satellite and AI-based analysis systems in the future.
 
-### 2. Get Analysis Results
-*   **GET** `/api/areas`
-*   **Query Params**: `type` (optional), `region` (optional)
-*   **Response**: List of analysis records suitable for map visualization.
+---
+
+## 🏗️ System Architecture
+
+User
+│
+▼
+Frontend (React + Firebase Hosting)
+│
+▼
+Backend API (Node.js + Express on Render)
+│
+▼
+Firebase Services
+├── Firestore (data storage)
+└── Storage (files / GeoJSON)
+
+yaml
+Copy code
+
+---
+
+## 🔄 Application Flow
+
+1. User opens the frontend dashboard
+2. Frontend calls backend APIs
+3. Backend processes analysis logic (mock data)
+4. Results are stored/retrieved from Firebase
+5. Frontend displays analysis results visually
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React (Vite)
+- JavaScript
+- Firebase Hosting
+
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+- Firebase Admin SDK
+
+### Cloud & Tools
+- Firebase Firestore
+- Firebase Storage
+- Render (Backend deployment)
+- GitHub (Version control)
+
+---
+
+## 📁 Project Structure
+
+Aravalli-Intelligence-Platform/
+│
+├── frontend/
+│ ├── src/
+│ ├── dist/
+│ ├── firebase.json
+│ └── package.json
+│
+├── backend/
+│ ├── src/
+│ │ ├── index.js
+│ │ ├── routes/
+│ │ ├── controllers/
+│ │ └── services/
+│ └── package.json
+│
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## 🚀 Deployment Details
+
+### 🌐 Frontend Deployment
+- Hosted on **Firebase Hosting**
+- Fast, secure, and scalable static hosting
+
+### ⚙️ Backend Deployment
+- Hosted on **Render**
+- Live REST APIs accessible publicly
+
+---
+
+## 🔗 Live URLs
+
+- **Frontend (Firebase Hosting):**  
+  👉 *(Add your Firebase URL here)*
+
+- **Backend API (Render):**  
+  👉 https://aravalli-intelligence-platform-b.onrender.com
+
+---
+
+## ⚙️ How to Run Locally (Optional)
+
+### Backend
+```bash
+cd backend
+npm install
+node src/index.js
+Frontend
+bash
+Copy code
+cd frontend
+npm install
+npm run build
+npm run dev
