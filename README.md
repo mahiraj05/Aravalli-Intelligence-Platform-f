@@ -8,7 +8,7 @@ An AI-powered environmental intelligence platform built to analyze, monitor, and
 ## 👥 Team Members
 - **Ritika**
 - **Mahi Raj**
-- **Mansi**
+- **Mansi Gautam**
 
 **Team Name:** GEN-AI-SIS
 
